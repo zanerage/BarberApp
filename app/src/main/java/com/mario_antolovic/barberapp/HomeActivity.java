@@ -1,5 +1,6 @@
 package com.mario_antolovic.barberapp;
 
+import android.app.AlertDialog;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.BottomSheetDialog;
@@ -31,6 +32,7 @@ import com.mario_antolovic.barberapp.Model.User;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import dmax.dialog.SpotsDialog;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -40,6 +42,8 @@ public class HomeActivity extends AppCompatActivity {
     BottomSheetDialog bottomSheetDialog;
 
     CollectionReference userRef;
+
+    AlertDialog dialog;
 
 
 
@@ -52,6 +56,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //init
         userRef = FirebaseFirestore.getInstance().collection("User");
+        dialog = new SpotsDialog.Builder().setContext(this).build();
 
         // check intent  , if is login = true , enable full access
         // if is login false , just let user around shopping to view
@@ -59,6 +64,7 @@ public class HomeActivity extends AppCompatActivity {
         {
             boolean isLogin = getIntent().getBooleanExtra(Common.IS_LOGIN,false);
             if(isLogin) {
+                dialog.show();
                 // check if user is exist
                 AccountKit.getCurrentAccount(new AccountKitCallback<Account>() {
                     @Override
@@ -118,8 +124,13 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void showUpdateDialg(final String phoneNumber) {
+        if (dialog.isShowing())
+            dialog.dismiss();
+
+
 // init dialog
         bottomSheetDialog = new BottomSheetDialog(this);
+        bottomSheetDialog.setTitle("One more step!");
         bottomSheetDialog.setCanceledOnTouchOutside(false);
         bottomSheetDialog.setCancelable(false);
         View sheetView = getLayoutInflater().inflate(R.layout.layout_update_user,null);
