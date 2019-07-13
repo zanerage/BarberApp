@@ -12,25 +12,28 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/bkgroundpicture"
         android:gravity="center"
         app:srcCompat="@drawable/logobarber" />
 
     <TextView
         android:id="@+id/txt_skip"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="72dp"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
+
 
         android:layout_centerHorizontal="true"
         android:fontFamily="More Fonts..."
-        android:text="Just Skip"
+        android:text="@string/just_skip"
         android:textColor="@android:color/background_light"
         android:textSize="28sp" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
+        android:layout_height="72dp"
+        android:text="@string/login"
         android:id="@+id/login_btn"
         android:background="@color/loginbtn"
         android:textColor="@color/white"

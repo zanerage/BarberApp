@@ -2,5 +2,14 @@
     <string name="app_name">BarberShopApp</string>
     <string name="FACEBOOK_APP_ID">354749228525109</string>
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">f5c24c691832c23cbf31b5dc270074c6</string>
+    <string name="just_skip">Just Skip</string>
+    <string name="login">Login</string>
+    <string name="bkgroundpicture">bkgroundpicture</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update">Update</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_address">Your Address</string>
 
 </resources>
