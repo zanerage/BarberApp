@@ -38,7 +38,9 @@
         android:background="@color/loginbtn"
         android:textColor="@color/white"
         android:textSize="26sp"
-        android:layout_above="@+id/txt_skip"/>
+        android:layout_above="@+id/txt_skip"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
 
 
 </RelativeLayout>

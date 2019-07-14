@@ -23,7 +23,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/white"
             android:textSize="20sp" />
 
     </android.support.design.widget.TextInputLayout>

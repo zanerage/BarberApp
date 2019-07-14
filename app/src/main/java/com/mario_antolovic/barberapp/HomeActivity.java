@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //init
         userRef = FirebaseFirestore.getInstance().collection("User");
-        dialog = new SpotsDialog.Builder().setContext(this).build();
+        dialog = new SpotsDialog.Builder().setContext(this).setCancelable(false).build();
 
         // check intent  , if is login = true , enable full access
         // if is login false , just let user around shopping to view
